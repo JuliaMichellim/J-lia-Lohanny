@@ -1,0 +1,71 @@
+/* Paleta de cores:
+   - Fundo: #f5f6f7 (cinza muito claro)
+   - Texto: #333 (cinza escuro)
+   - Azul principal: #007bff
+   - Azul escuro para hover: #0056b3
+*/
+
+@import url('https://fonts.cdnfonts.com/css/cascadia-mono');
+
+:root {
+  --color-bg: #f5f6f7;
+  --color-text: #333;
+  --color-accent: #007bff;
+  --color-accent-dark: #0056b3;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cascadia Mono', monospace;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px var(--color-accent));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 10px var(--color-accent-dark));
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+code {
+  background: rgba(0, 123, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: 'Cascadia Mono', monospace;
+  color: var(--color-accent-dark);
+}
