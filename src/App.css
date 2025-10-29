@@ -1,71 +1,101 @@
-/* Paleta de cores:
-   - Fundo: #f5f6f7 (cinza muito claro)
-   - Texto: #333 (cinza escuro)
-   - Azul principal: #007bff
-   - Azul escuro para hover: #0056b3
-*/
-
-@import url('https://fonts.cdnfonts.com/css/cascadia-mono');
-
-:root {
-  --color-bg: #f5f6f7;
-  --color-text: #333;
-  --color-accent: #007bff;
-  --color-accent-dark: #0056b3;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Cascadia Mono', monospace;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.App {
+  text-align: center;
+  padding: 30px;
+  background-color: #fdf8f2; 
+  color: #333;
   min-height: 100vh;
 }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
+.toggle-btn {
+  background-color: #1f4f73;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-a:hover {
-  color: var(--color-accent-dark);
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 10px var(--color-accent));
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 10px var(--color-accent-dark));
+.toggle-btn:hover {
+  background-color: #2c678f;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-text);
+  font-weight: 700;
+  color: #1f4f73;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
+h3 {
+  font-weight: 500;
+  color: #444;
 }
 
-code {
-  background: rgba(0, 123, 255, 0.1);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: 'Cascadia Mono', monospace;
-  color: var(--color-accent-dark);
+.box {
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  padding: 25px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
 }
+
+select {
+  background-color: #fff;
+  border: 2px solid #1f4f73;
+  color: #333;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+select:hover {
+  border-color: #2c678f;
+  box-shadow: 0 0 5px rgba(31, 79, 115, 0.3);
+}
+
+.dark-mode {
+  background-color: #1e1f24;
+  color: #eee;
+}
+
+.dark-mode h1 {
+  color: #8dbce6; 
+}
+
+.dark-mode .box {
+  background-color: #2a2c33;
+  border-color: #444;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+.dark-mode select {
+  background-color: #333;
+  color: #eee;
+  border-color: #8dbce6;
+}
+
+.dark-mode .toggle-btn {
+  background-color: #8dbce6;
+  color: #1e1f24;
+}
+
+.dark-mode .toggle-btn:hover {
+  background-color: #a7d1f2;
+}
+
+/*teste */
